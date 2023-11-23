@@ -33,3 +33,21 @@ hamburgerBtn.addEventListener("click", () => {
   hamburgerIcon.classList.toggle("fa-xmark");
   hamburgerIcon.classList.toggle("fa-bars");
 });
+
+
+const options = { root: null, rootMargin: "0px", threshold: 0 };
+const pageEffect = (element) => {
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        let target = entry.target;
+        target.classList.add("slideUp");
+        observer.disconnect();
+      }
+    });
+  }, options);
+  io.observe(element);
+};
+let sections = $$(".obs");
+// console.log(sections);
+sections.forEach((section) => pageEffect(section));

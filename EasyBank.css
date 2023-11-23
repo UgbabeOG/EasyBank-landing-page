@@ -178,7 +178,7 @@ a::before {
   top: 10%;
   height: 115%;
   width: 120%;
-  background-image: url(/images/image-mockups.png);
+  background-image: url(./images/image-mockups.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -315,7 +315,7 @@ svg path {
     display: none;
   }
   .home-image {
-    background-image: url(/images/bg-intro-mobile.svg);
+    background-image: url(./images/bg-intro-mobile.svg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 17.5rem;
@@ -343,6 +343,9 @@ svg path {
   .feature-description {
     margin-bottom: 1rem;
   }
+  .article-item:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
   .article_text p {
     padding: 1rem 1.875rem 2rem 1.875rem;
   }
@@ -354,6 +357,13 @@ svg path {
   .invite-btn {
     margin-bottom: 1.875rem;
   }
+  .footer-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+.slideUp {
+  animation: slideUp 1s ease-in-out forwards;
 }
 /* for  tab & desktop*/
 @media (width >= 27.8125em) {
@@ -373,7 +383,7 @@ svg path {
     align-items: center;
   }
   .home-image {
-    background-image: url(/images/bg-intro-desktop.svg);
+    background-image: url(./images/bg-intro-desktop.svg);
     background-size: 173%;
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -474,5 +484,18 @@ svg path {
   to {
     visibility: hidden;
     opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
   }
 }
