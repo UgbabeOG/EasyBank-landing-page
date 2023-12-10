@@ -48,6 +48,5 @@ const pageEffect = (element) => {
   }, options);
   io.observe(element);
 };
-let sections = $$(".obs");
-// console.log(sections);
+const sections = $$(".obs");
 sections.forEach((section) => pageEffect(section));
