@@ -407,7 +407,8 @@ svg path {
   }
   .feature-flex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-left: 2.438rem;
     gap: 1.875rem;
   }
 
